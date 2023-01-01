@@ -1,0 +1,130 @@
+body {
+  background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+}
+
+h2 {
+  margin: 40px;
+
+  padding: 20px 0 0 0;
+  color: #4c5b61;
+  font-family: "Pacifico", cursive;
+  font-size: 20px;
+}
+p {
+  font-size: 24px;
+}
+form {
+  text-align: right;
+}
+.box-info {
+  font-size: 30px;
+  font-family: Calibri, "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
+  padding: 0;
+}
+.box-info-two {
+  font-size: 30px;
+  font-family: Calibri, "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
+  padding: 0;
+}
+.box-info-three {
+  font-size: 30px;
+  font-family: Calibri, "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
+  padding: 0;
+}
+.box-info-four {
+  font-size: 30px;
+  font-family: Calibri, "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
+  padding: 0;
+}
+.heading {
+  width: 50%;
+  margin: 40px 50px 20px 50px;
+  color: #1ab2a8;
+  font-family: "Pacifico", cursive;
+  font-size: 70px;
+  text-decoration: underline;
+}
+.boxes {
+  margin: 10px 0;
+  padding: 20px 0 0 0;
+  color: #fff;
+  font-family: "Pacifico", cursive;
+  font-size: 40px;
+}
+
+.current-extra {
+  background-color: #d81159;
+  border-radius: 80px;
+  font-family: "Pacifico", cursive;
+  padding: 0 0 10px 0;
+}
+.city {
+  font-size: 75px;
+  font-weight: 500;
+  padding-top: 0;
+}
+.temperature {
+  font-size: 70px;
+  font-weight: 700;
+  padding-top: 0;
+}
+.change {
+  text-align: center;
+  text-decoration: underline;
+}
+.extra-info {
+  background-color: #fbb13c;
+  border-radius: 80px;
+}
+.card {
+  text-align: center;
+  display: block;
+  margin: auto;
+  width: 70%;
+}
+.card-title {
+  font-family: "Pacifico", cursive;
+  font-size: 30px;
+}
+.col {
+  display: block;
+  margin: 0 auto;
+}
+.cloud {
+  font-size: 50px;
+  color: #4c5b61;
+  padding-top: 20px;
+}
+.sun-one {
+  font-size: 70px;
+  color: #fbb13c;
+  padding-top: 20px;
+}
+.sun-two {
+  font-size: 50px;
+  color: #fbb13c;
+  padding-top: 20px;
+}
+.rain {
+  font-size: 50px;
+  color: #b3e2f8;
+  padding-top: 20px;
+}
+.thunder {
+  font-size: 50px;
+  color: #d81159;
+  padding-top: 20px;
+}
+.wind {
+  font-size: 50px;
+  color: #4c5b61;
+  padding-top: 20px;
+}
+.snow {
+  font-size: 50px;
+  color: #b3e2f8;
+  padding-top: 20px;
+}
+.current-button {
+  color: #4c5b61;
+}
