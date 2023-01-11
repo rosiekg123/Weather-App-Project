@@ -76,13 +76,16 @@ farenheitLink.addEventListener("click", convertToFarenheit);
 //Week 5 Homework - Search Function
 
 function showTemperature(response) {
+  console.log(response.data);
+  let iconElement = document.querySelector("mainIcon");
+
   document.querySelector("#currentCity").innerHTML = response.data.name;
   document.querySelector("#temp").innerHTML = `${Math.round(
     response.data.main.temp
   )}&#8451`;
   document.querySelector(
     "#current-description"
-  ).innerHTML = `${response.data.weather[0].main}`;
+  ).innerHTML = `${response.data.weather[0].description}`;
   document.querySelector(
     "#humidity"
   ).innerHTML = `Humidity: ${response.data.main.humidity}%`;
@@ -92,6 +95,11 @@ function showTemperature(response) {
   document.querySelector(
     "#pressure"
   ).innerHTML = `Pressure: ${response.data.main.pressure}`;
+
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 function pullCityInfo(citySearch) {

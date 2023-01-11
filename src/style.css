@@ -35,6 +35,7 @@ form {
   font-size: 30px;
   font-family: Calibri, "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
   padding: 0;
+  text-transform: capitalize;
 }
 .heading {
   width: 50%;
