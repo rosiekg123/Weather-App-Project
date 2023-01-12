@@ -44,7 +44,7 @@ let month = months[now.getMonth()];
 
 h5.innerHTML = `${day}`;
 h5two.innerHTML = `${date} ${month} ${year}`;
-h5three.innerHTML = `${hours}:${minutes}`;
+h5three.innerHTML = `Last Updated: ${hours}:${minutes}`;
 
 //Feature 2
 
@@ -81,7 +81,6 @@ let celsiusTemperature = null;
 //Week 5 Homework - Search Function
 
 function showTemperature(response) {
-  console.log(response.data);
   let iconElement = document.querySelector("mainIcon");
 
   celsiusTemperature = response.data.main.temp;
