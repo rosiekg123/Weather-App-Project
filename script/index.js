@@ -47,6 +47,7 @@ h5two.innerHTML = `${date} ${month} ${year}`;
 h5three.innerHTML = `${hours}:${minutes}`;
 
 //Feature 2
+
 function search(event) {
   event.preventDefault();
   let cityElement = document.querySelector("#currentCity");
@@ -128,6 +129,7 @@ searchFormTwo.addEventListener("submit", searchCity);
 function getCurrentPosition() {
   navigator.geolocation.getCurrentPosition(pullCityInfo);
 }
+
 //Week 5 Homework - Current Button
 
 function findPositionTwo(position) {

@@ -40,7 +40,7 @@ form {
 .heading {
   width: 50%;
   margin: 40px 50px 20px 50px;
-  color: #1ab2a8;
+  color: #4c5b61;
   font-family: "Pacifico", cursive;
   font-size: 70px;
   text-decoration: underline;
@@ -54,10 +54,10 @@ form {
 }
 
 .current-extra {
-  background-color: #d81159;
+  background: rgba(216, 17, 89, 0.8);
   border-radius: 80px;
   font-family: "Pacifico", cursive;
-  padding: 0 0 10px 0;
+  padding: 0 0 5px 0;
 }
 .city {
   font-size: 75px;
@@ -74,7 +74,7 @@ form {
   text-decoration: underline;
 }
 .extra-info {
-  background-color: #fbb13c;
+  background: rgba(251, 177, 60, 0.8);
   border-radius: 80px;
 }
 .card {
