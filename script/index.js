@@ -57,21 +57,25 @@ let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", search);
 
 //Bonus Feature
-function convertToCelcius(event) {
-  event.preventDefault();
-  let celsiusTemperature = document.querySelector("#temp");
-  celsiusTemperature.innerHTML = `15&#8451`;
-}
+
 function convertToFarenheit(event) {
   event.preventDefault();
-  let FarenheitTemperature = document.querySelector("#temp");
-  FarenheitTemperature.innerHTML = `55&#8457`;
+  let farenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  let temperatureElement = document.querySelector("#temp");
+  temperatureElement.innerHTML = `${Math.round(farenheitTemperature)}&#8457`;
 }
+function convertToCelcius(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temp");
+  temperatureElement.innerHTML = `${Math.round(celsiusTemperature)}&#8451`;
+}
+let farenheitLink = document.querySelector("#farenheit-link");
+farenheitLink.addEventListener("click", convertToFarenheit);
+
 let celciusLink = document.querySelector("#celsius-link");
 celciusLink.addEventListener("click", convertToCelcius);
 
-let farenheitLink = document.querySelector("#farenheit-link");
-farenheitLink.addEventListener("click", convertToFarenheit);
+let celsiusTemperature = null;
 
 //Week 5 Homework - Search Function
 
@@ -79,6 +83,7 @@ function showTemperature(response) {
   console.log(response.data);
   let iconElement = document.querySelector("mainIcon");
 
+  celsiusTemperature = response.data.main.temp;
   document.querySelector("#currentCity").innerHTML = response.data.name;
   document.querySelector("#temp").innerHTML = `${Math.round(
     response.data.main.temp
