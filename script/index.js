@@ -81,7 +81,8 @@ let celsiusTemperature = null;
 //Week 5 Homework - Search Function
 
 function showTemperature(response) {
-  let iconElement = document.querySelector("mainIcon");
+  console.log(response.data);
+  let iconElement = document.querySelector("#mainIcon");
 
   celsiusTemperature = response.data.main.temp;
   document.querySelector("#currentCity").innerHTML = response.data.name;
