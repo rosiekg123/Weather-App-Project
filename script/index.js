@@ -85,6 +85,7 @@ function showTemperature(response) {
   let iconElement = document.querySelector("#mainIcon");
 
   celsiusTemperature = response.data.main.temp;
+
   document.querySelector("#currentCity").innerHTML = response.data.name;
   document.querySelector("#temp").innerHTML = `${Math.round(
     response.data.main.temp
@@ -148,3 +149,32 @@ function showCurrentLocation() {
 }
 let currentLocation = document.querySelector("#currentButton");
 currentLocation.addEventListener("click", showCurrentLocation);
+
+//Week 8 Forecast
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+  <div class="col">
+ <div class="card-deck">
+  <div class="card">
+    <i class="fa-solid fa-cloud cloud"></i>
+    <div class="card-body">
+      <h5 class="card-title" >${day}</h5>
+      <p class="card-text" id="weather-forecast-temperatures"> 12&#8451 /15&#8451</p>
+      </div>
+      </div>
+      </div>
+      </div>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
+displayForecast();
+displayForecastTwo();
