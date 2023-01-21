@@ -82,11 +82,11 @@ form {
   text-align: center;
   display: block;
   margin: auto;
-  width: 70%;
+  width: 100%;
 }
 .card-title {
   font-family: "Pacifico", cursive;
-  font-size: 30px;
+  font-size: 40px;
 }
 .col {
   display: block;
@@ -129,4 +129,12 @@ form {
 }
 .current-button {
   color: #4c5b61;
+}
+
+.card-text {
+  font-weight: bold;
+  font-size: 20px;
+}
+.card-text-two {
+  font-size: 15px;
 }

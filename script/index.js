@@ -152,27 +152,46 @@ let currentLocation = document.querySelector("#currentButton");
 currentLocation.addEventListener("click", showCurrentLocation);
 
 //Week 8 Forecast
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  return days[day];
+}
+
 function displayForecast(response) {
-  console.log(response.data.daily);
+  let forecast = response.data.daily;
+
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
-  let days = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue"];
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `
+  forecast.forEach(function (forecastDay, index) {
+    if (index > 0) {
+      forecastHTML =
+        forecastHTML +
+        `
   <div class="col">
  <div class="card-deck">
   <div class="card">
-    <i class="fa-solid fa-cloud cloud"></i>
+  <div class="text-bg-secondary p-4">
+    <img
+    src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
+    alt=""
+    
+        />
     <div class="card-body">
-      <h5 class="card-title" >${day}</h5>
-      <p class="card-text" id="weather-forecast-temperatures"> 12&#8451 /15&#8451</p>
+      <h5 class="card-title">${formatDay(forecastDay.dt)}</h5>
+      <span class="card-text" id="weather-forecast-temperatures-one"> ${Math.round(
+        forecastDay.temp.max
+      )} °</span><span class="card-text-two" id="weather-forecast-temperatures-two"> / ${Math.round(
+          forecastDay.temp.min
+        )} °</span>
+      </div>
       </div>
       </div>
       </div>
       </div>`;
+    }
   });
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
